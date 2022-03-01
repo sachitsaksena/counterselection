@@ -13,7 +13,6 @@ from torch.nn.parameter import Parameter
 from torch.nn import init
 
 from tqdm import tqdm
-from regression import *
 torch.cuda.set_device(1)
 
 global_aa = list("ACDEFGHIKLMNPQRSTVWY")
