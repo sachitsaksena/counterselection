@@ -16,7 +16,7 @@ from tqdm import tqdm
 torch.cuda.set_device(1)
 
 def compute_pred_labels(ensemble_path, loader):
-    models = [Seq32x1_16(), Seq32x2_16(), Seq64x1_16(), Seq_emb_32x1_16(), Seq32x1_16_filt3()]
+    models = [Seq_32_32(), Seq32x1_16(), Seq32x2_16(), Seq64x1_16(), Seq_emb_32x1_16(), Seq32x1_16_filt3()]
     with torch.no_grad():
         overall_preds=[]
         pbar = tqdm(loader, position=0, leave=True)
@@ -43,7 +43,7 @@ def compute_pred_labels(ensemble_path, loader):
     return ensemble_preds.reshape(-1), truths
 
 def compute_pred_logits(ensemble_path, loader):
-    models = [Seq32x1_16(), Seq32x2_16(), Seq64x1_16(), Seq_emb_32x1_16(), Seq32x1_16_filt3()]
+    models = [Seq_32_32(), Seq32x1_16(), Seq32x2_16(), Seq64x1_16(), Seq_emb_32x1_16(), Seq32x1_16_filt3()]
     with torch.no_grad():
         overall_preds=[]
         pbar = tqdm(loader, position=0, leave=True)
