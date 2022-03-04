@@ -1,2 +1,2 @@
 # counterselection
-Rep for computational counterselection used to identify nonspecific sequences in affinity selection experiments.
+Repo for computational counterselection used to identify nonspecific sequences in affinity selection experiments.
